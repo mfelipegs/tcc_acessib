@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="titulo aaa, aq da p por as opcoes pra avaliar">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    
+    <title> Conheça o Acessib! </title>
+    
+    <link rel="stylesheet" href="css/nicepage.css" media="screen">
+    <link rel="stylesheet" href="css/Início.css" media="screen">
+    <script class="u-script" type="text/javascript" src="js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 3.11.0, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    
+    <script type="application/ld+json">
+    {
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"url": "index.html",
+		"logo": "images/default-logo.png"
+    }
+    </script>
+
+  <script type="text/javascript">
+    var marker;
+
+    if(navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position){ // callback de sucesso
+        // ajusta a posição do marker para a localização do usuário
+        marker.setPosition(new google.maps.meulocal(position.coords.latitude, position.coords.longitude));
+    }, 
+    function(error){ // callback de erro
+      alert('Erro ao obter localização!');
+      console.log('Erro ao obter localização.', error);
+    });
+    } else {
+      console.log('Navegador não suporta Geolocalização!');
+    }
+
+
+
+    window.onload = function()
+    {
+      document.addEventListener('deviceready', iniciar);
+    }
+
+    function iniciar()
+    {
+      navigator.geolocation.getCurrentPosition(geoSucesso, geoErro);
+    }
+
+    function geoSucesso(dados)
+    {
+      var lat = dados.coords.latitude;
+      var lon = dados.coords.longitude;
+      
+      localStorage.setItem('lat', lat);
+      localStorage.setItem('lon', lon);
+      
+      var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=";
+      url += lat + ",";
+      url += lon + "&key=";
+      url += "AIzaSyDnF5EkADLnXWLZmQFELB7WueUvqHF0bm4";
+            
+      $.ajax({
+          dataType:"json",
+          url:url,
+          error:function(e){
+              $("#local").html("Não foi possível definir a sua localização :(");
+              //$("#local").html("Houve um erro:" + e.message);
+          },
+          success: function(r){
+              //console.log(r);
+              $("#local").html("Sua localização:" + r.results[1].formatted_address);
+          }
+      })
+    }
+
+    function geoErro(e)
+    {
+      navigator.notification.alert('Houve um erro ' + e.mensagem,'', 'Erro');
+    }
+  </script>
+
+    <meta property="og:title" content="Início">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <link rel="canonical" href="index.html">
+    <meta property="og:url" content="index.html">
+
+  </head>
+  <body data-home-page="index.html" data-home-page-title="Início" class="u-body"><header class="u-clearfix u-header u-palette-1-base u-header" id="sec-1925"><div class="u-clearfix u-sheet u-sheet-1">
+
+        <a data-page-id="3050230022" class="u-image u-logo u-image-1" data-image-width="80" data-image-height="40" title="Início">
+          <img src="images/default-logo.png" class="u-logo-image u-logo-image-1" data-image-width="75">
+        </a>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</symbol>
+</defs></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-light-2 u-text-hover-palette-5-light-1" href="http://localhost/TCC_Acessib/www/Entrar.php" style="padding: 10px 10px;"></a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-light-2 u-text-hover-palette-5-light-1" href="http://localhost/TCC_Acessib/www/Entrar.php" style="padding: 10px 10px;"></a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-light-2 u-text-hover-palette-5-light-1" href="http://localhost/TCC_Acessib/www/Entrar.php" style="padding: 10px 10px;"></a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-light-2 u-text-hover-palette-5-light-1" href="http://localhost/TCC_Acessib/www/Entrar.php" style="padding: 10px 10px;"></a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="index.html" style="padding: 10px 20px;"><img src="images/acessibb.png" class="u-logo-image u-logo-image-1" data-image-width="64"></a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="http://localhost/TCC_Acessib/www/Entrar.php" style="padding: 10px 20px;"></a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="http://localhost/TCC_Acessib/www/Entrar.php" style="padding: 10px 20px;"></a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="http://localhost/TCC_Acessib/www/Entrar.php" style="padding: 10px 20px;"></a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="http://localhost/TCC_Acessib/www/Entrar.php" style="padding: 10px 20px;"></a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+        <a href="http://localhost/TCC_Acessib/www/Entrar.php" data-page-id="247969335" class="u-border-0 u-btn u-btn-round u-button-style u-hover-palette-5-light-2 u-radius-50 u-text-palette-1-base u-white u-btn-1">Entrar</a>
+      </div></header>
+
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+      
+      <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="1280" data-image-height="961" id="sec-ac37">
+        <div class="u-clearfix u-sheet u-sheet-1">
+          <h1 class="u-text u-title u-text-1">Conheça o Acessib</h1>
+          <p class="u-large-text u-text u-text-variant u-text-2">O Acessib é um projeto da Ascent, ainda em fase de desenvolvimento, para a plataforma mobile, que tem o propósito de gerenciar e avaliar estabelecimentos com foco na acessibilidade, por usuários tanto comuns como proprietários. Comece com o Acessib no botão abaixo.&nbsp;</p>
+          <a href="Cadastro.html" class="u-btn u-button-style u-custom-color-1 u-btn-1">Inscrever-se</a>
+        </div>
+      </section>
+      <section class="u-clearfix u-section-2" id="sec-19b3">
+        <div class="u-clearfix u-sheet u-sheet-1">
+          <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout">
+              <div class="u-layout-col">
+                <div class="u-size-30">
+                  <div class="u-layout-row">
+                    <div class="u-container-style u-image u-layout-cell u-left-cell u-size-30 u-image-1" src="" data-image-width="1280" data-image-height="853">
+                      <div class="u-container-layout u-valign-middle u-container-layout-1"></div>
+                    </div>
+                    <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
+                      <div class="u-container-layout u-container-layout-2">
+                        <h2 class="u-text u-text-1">Torne ​sua cidade mais acessível</h2>
+                        <p class="u-text u-text-2">Após se cadastrar e fazer login, cadastre algum estabelecimento conhecido na sua cidade ou região para que você e outros usuários possam o avaliar! Preenchendo um formulário de avaliação, a comunidade saberá se o lugar que você avaliou possui ou não uma acessibilidade adequada para tais usuários.</p>
+                        <a href="http://localhost/TCC_Acessib/www/Entrar.php" data-page-id="46639200" class="u-btn u-btn-rectangle u-button-style u-palette-1-base u-btn-1">Faça login</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="u-size-30">
+                  <div class="u-layout-row">
+                    <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-3">
+                      <div class="u-container-layout u-valign-middle u-container-layout-3">
+                        <h2 class="u-text u-text-3">Acessibilidade</h2>
+                        <p class="u-text u-text-4">O Acessib é para todos! Já temos algumas implementações de acessibilidade no aplicativo, e a Ascent continuará a trabalhar nisso. Em breve, também será implementado o sistema de avaliação de trajetos.</p>
+                        <a href="Cadastro.html" data-page-id="46639200" class="u-border-2 u-border-palette-1-base u-btn u-btn-rectangle u-button-style u-none u-text-body-color u-btn-2">Cadastre-se</a>
+                      </div>
+                    </div>
+                    <div class="u-container-style u-image u-layout-cell u-right-cell u-size-30 u-image-2" src="" data-image-width="1280" data-image-height="853">
+                      <div class="u-container-layout u-valign-middle u-container-layout-4"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="u-align-center u-clearfix u-grey-5 u-section-3" id="carousel_e3a8">
+        <div class="u-clearfix u-sheet u-sheet-1">
+          <h2 class="u-text u-text-1">avalie estabelecimentos próximos</h2>
+          <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout">
+              <div class="u-layout-col">
+                <div class="u-size-30">
+                  <div class="u-layout-row">
+                    <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-15 u-size-30-md u-layout-cell-1">
+                      <div class="u-container-layout u-container-layout-1"><span class="u-icon u-icon-circle u-text-grey-40 u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-fb01"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg-fb01" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" class="u-svg-content"><g><g><path d="M256,0C153.755,0,70.573,83.182,70.573,185.426c0,126.888,165.939,313.167,173.004,321.035    c6.636,7.391,18.222,7.378,24.846,0c7.065-7.868,173.004-194.147,173.004-321.035C441.425,83.182,358.244,0,256,0z M256,278.719    c-51.442,0-93.292-41.851-93.292-93.293S204.559,92.134,256,92.134s93.291,41.851,93.291,93.293S307.441,278.719,256,278.719z"></path>
+  </g>
+  </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></span>
+                        <h6 class="u-text u-text-2">Encontre seu estabelecimento no mapa</h6>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-style u-layout-cell u-size-15 u-size-30-md u-layout-cell-2">
+                      <div class="u-container-layout u-container-layout-2"><span class="u-icon u-icon-circle u-text-grey-40 u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 384 384"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-cd86"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg-cd86" x="0px" y="0px" viewBox="0 0 384 384" style="enable-background:new 0 0 384 384;" xml:space="preserve" class="u-svg-content"><g><g><path d="M353.188,252.052c-23.51,0-46.594-3.677-68.469-10.906c-10.719-3.656-23.896-0.302-30.438,6.417l-43.177,32.594    c-50.073-26.729-80.917-57.563-107.281-107.26l31.635-42.052c8.219-8.208,11.167-20.198,7.635-31.448    c-7.26-21.99-10.948-45.063-10.948-68.583C132.146,13.823,118.323,0,101.333,0H30.813C13.823,0,0,13.823,0,30.813    C0,225.563,158.438,384,353.188,384c16.99,0,30.813-13.823,30.813-30.813v-70.323C384,265.875,370.177,252.052,353.188,252.052z"></path>
+  </g>
+  </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></span>
+                        <h6 class="u-text u-text-3">Cadastre seus dados de usuário</h6>
+                      </div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-size-15 u-size-30-md u-layout-cell-3">
+                      <div class="u-container-layout u-container-layout-3"><span class="u-icon u-icon-circle u-text-grey-40 u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f872"></use></svg><svg xmlns="http://www.w3.org/2000/svg" id="svg-f872" enable-background="new 0 0 512 512" viewBox="0 0 512 512" class="u-svg-content"><path d="m201 12.714v184.286h267v-184.286c0-7.022-5.692-12.714-12.714-12.714h-241.572c-7.022 0-12.714 5.692-12.714 12.714zm63.89 33.131h70.271c8.284 0 15 6.716 15 15s-6.716 15-15 15h-70.271c-8.284 0-15-6.716-15-15s6.715-15 15-15zm0 75.142h139.22c8.284 0 15 6.716 15 15s-6.716 15-15 15h-139.22c-8.284 0-15-6.716-15-15s6.715-15 15-15z"></path><path d="m472 227h-275c-22.091 0-40 17.909-40 40v205c0 22.091 17.909 40 40 40h275c22.091 0 40-17.909 40-40v-205c0-22.091-17.909-40-40-40zm-207.5 217.5h-20c-8.284 0-15-6.716-15-15s6.716-15 15-15h20c8.284 0 15 6.716 15 15s-6.716 15-15 15zm0-60h-20c-8.284 0-15-6.716-15-15s6.716-15 15-15h20c8.284 0 15 6.716 15 15s-6.716 15-15 15zm0-60h-20c-8.284 0-15-6.716-15-15s6.716-15 15-15h20c8.284 0 15 6.716 15 15s-6.716 15-15 15zm80 120h-20c-8.284 0-15-6.716-15-15s6.716-15 15-15h20c8.284 0 15 6.716 15 15s-6.716 15-15 15zm0-60h-20c-8.284 0-15-6.716-15-15s6.716-15 15-15h20c8.284 0 15 6.716 15 15s-6.716 15-15 15zm0-60h-20c-8.284 0-15-6.716-15-15s6.716-15 15-15h20c8.284 0 15 6.716 15 15s-6.716 15-15 15zm80 120h-20c-8.284 0-15-6.716-15-15s6.716-15 15-15h20c8.284 0 15 6.716 15 15s-6.716 15-15 15zm0-60h-20c-8.284 0-15-6.716-15-15s6.716-15 15-15h20c8.284 0 15 6.716 15 15s-6.716 15-15 15zm0-60h-20c-8.284 0-15-6.716-15-15s6.716-15 15-15h20c8.284 0 15 6.716 15 15s-6.716 15-15 15z"></path><path d="m87 227h-47c-22.091 0-40 17.909-40 40v205c0 22.091 17.909 40 40 40h47c22.091 0 40-17.909 40-40v-205c0-22.091-17.909-40-40-40z"></path></svg></span>
+                        <h6 class="u-align-center u-text u-text-4">Avalie estabelecimentos disponíveis</h6>
+                      </div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-right-cell u-size-15 u-size-30-md u-layout-cell-4">
+                      <div class="u-container-layout u-container-layout-4"><span class="u-icon u-icon-circle u-text-grey-40 u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-d2c4"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg-d2c4" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" class="u-svg-content"><g><g><path d="M467,61H45c-6.927,0-13.412,1.703-19.279,4.51L255,294.789l51.389-49.387c0,0,0.004-0.005,0.005-0.007    c0.001-0.002,0.005-0.004,0.005-0.004L486.286,65.514C480.418,62.705,473.929,61,467,61z"></path>
+  </g>
+  </g><g><g><path d="M507.496,86.728L338.213,256.002L507.49,425.279c2.807-5.867,4.51-12.352,4.51-19.279V106    C512,99.077,510.301,92.593,507.496,86.728z"></path>
+  </g>
+  </g><g><g><path d="M4.51,86.721C1.703,92.588,0,99.073,0,106v300c0,6.923,1.701,13.409,4.506,19.274L173.789,256L4.51,86.721z"></path>
+  </g>
+  </g><g><g><path d="M317.002,277.213l-51.396,49.393c-2.93,2.93-6.768,4.395-10.605,4.395s-7.676-1.465-10.605-4.395L195,277.211    L25.714,446.486C31.582,449.295,38.071,451,45,451h422c6.927,0,13.412-1.703,19.279-4.51L317.002,277.213z"></path>
+  </g>
+  </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></span>
+                        <h6 class="u-align-center u-text u-text-5">Contate a Ascent: ascentsa.suporte@gmail.com</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-5413"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Ascent - 2021 - © Todos os direitos reservados.</p>
+      </div></footer>
+  </body>
+</html>
