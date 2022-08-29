@@ -5,6 +5,8 @@ O projeto de TCC foi desenvolvido pela equipe Ascent.
 
 O Acessib consiste num aplicativo de avaliação de estabelecimentos com base na acessibilidade notada pelo usuário. Mais informações na [documentação](acessib_documentacao.docx).
 
+## Technologies used
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" /> <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" /> <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"/> <img src="https://img.shields.io/badge/Cordova-35434F?style=for-the-badge&logo=apache-cordova&logoColor=E8E8E8" /> <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" />
 ## Screenshots
 
 - Tela principal, após o login
