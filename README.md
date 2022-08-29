@@ -11,6 +11,8 @@ O Acessib consiste num aplicativo de avaliação de estabelecimentos com base na
 
 ![image](https://user-images.githubusercontent.com/104948713/187316815-0d3505bd-4ba7-41e1-8809-e1335365d559.png)
 
+![image](https://user-images.githubusercontent.com/104948713/187317275-e0d756bb-be61-4638-8603-a3fcd3174b8e.png)
+
 - Tela de avaliação dos estabelecimentos
 
 ![image](https://user-images.githubusercontent.com/104948713/187316902-ccf22e05-673b-440f-8c8f-ed3e292f61db.png)
